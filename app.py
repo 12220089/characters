@@ -1,12 +1,10 @@
 from flask import Flask, render_template, request
 import cv2
+import os
 import numpy as np
 import pickle
 from transformers import ResizeTransformer, PreprocessTransformer
-from gunicorn import util
-import platform
-import fcntl
-import os
+
 # scikit-learn version = 1.4.2
 # import openCV
 # import necessary package
@@ -67,5 +65,6 @@ def index():
         return render_template('index.html', predicted_labels=predicted_labels)
     return render_template('index.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "_main_":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port,debug=True)

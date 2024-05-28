@@ -3,4 +3,3 @@ numpy==1.22.2
 opencv-python
 scikit-learn
 transformers
-gunicorn
