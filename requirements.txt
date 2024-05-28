@@ -1,5 +1,5 @@
 Flask==2.0.2
 numpy==1.22.2
-opencv-python==4.5.5.62
-scikit-learn==1.0.2
-transformers==4.11.3
+opencv-python
+scikit-learn
+transformers
